@@ -11,17 +11,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
+@Table(name="tbl_sem")
+@NoArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
-@Table(name="tbl_user")
-public class User {
+public class Semester {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="user_id")
+    @Column(name="sem_id")
     public long id;
-    @Column(name="user_desc",nullable = false,length = 8)
-    public String userDesc;
-    @Column(name="status",nullable = false,length = 1)
+    @Column(name="sem_desc")
+    public String semDesc;
+    @Column(name="status")
     public String status;
 }
